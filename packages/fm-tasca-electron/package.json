@@ -1,5 +1,5 @@
 {
-	"name": "tasca-electron",
+	"name": "fm-tasca-electron",
 	"version": "1.0.0",
 	"description": "Tasca plugin to easily run electron",
 	"main": "src/index.js",

@@ -1,5 +1,5 @@
 {
-	"name": "tasca-serve",
+	"name": "fm-tasca-serve",
 	"version": "1.0.1",
 	"description": "Tasca plugin to easily serve files over a HTTP server.",
 	"main": "src/index.js",

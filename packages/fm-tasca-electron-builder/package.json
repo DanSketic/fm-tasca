@@ -1,5 +1,5 @@
 {
-	"name": "tasca-electron-builder",
+	"name": "fm-tasca-electron-builder",
 	"version": "1.0.0",
 	"description":"Electron-builder plugin for tasca",
 	"main": "src/index.js",

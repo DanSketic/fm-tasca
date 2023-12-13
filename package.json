@@ -1,13 +1,13 @@
 {
 	"private":true,
 	"workspaces": [
-		"packages/tasca",
-		"packages/tasca-webpack",
-		"packages/tasca-electron",
-		"packages/tasca-serve",
-		"packages/tasca-electron-builder"
+		"packages/fm-tasca",
+		"packages/fm-tasca-webpack",
+		"packages/fm-tasca-electron",
+		"packages/fm-tasca-serve",
+		"packages/fm-tasca-electron-builder"
 	],
 	"scripts":{
-		"test": "node packages/tasca/src/index.js ./packages/tasca/test/test.js"
+		"test": "node packages/fm-tasca/src/index.js ./packages/fm-tasca/test/test.js"
 	}
 }

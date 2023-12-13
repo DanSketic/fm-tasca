@@ -1,14 +1,14 @@
-# 📑 Tasca
+# 📑 FM-Tasca
 
-Tasca is a easy-to-use task runner, useful to automate the process of compiling your app.
+FM-Tasca is a easy-to-use task runner, useful to automate the process of compiling your app.
 
 Install with npm:
 ```shell
-npm i tasca -D
+npm i fm-tasca -D
 ```
 Or with yarn:
 ```shell
-yarn add tasca -D
+yarn add fm-tasca -D
 ```
 
 Example tasks file:
@@ -44,17 +44,17 @@ exports.default = [
 
 Default task:
 ```shell
-tasca ./tasks.js
+fm-tasca ./tasks.js
 ```
 
 Custom tasks:
 ```shell
-tasca ./tasks.js --tasks my_task another_task
+fm-tasca ./tasks.js --tasks my_task another_task
 ```
 
 Passing info to the task file as global variables:
 ```shell
-tasca ./tasks.js --info something=Whatever
+fm-tasca ./tasks.js --info something=Whatever
 ```
 
 ## 🤓 Contributing

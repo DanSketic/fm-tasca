@@ -1,5 +1,5 @@
 {
-	"name": "tasca-webpack",
+	"name": "fm-tasca-webpack",
 	"version": "1.0.3",
 	"description": "Tasca plugin to easily use webpack",
 	"main": "src/index.js",

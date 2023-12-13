@@ -2,31 +2,31 @@ const { spawn } = require('child_process')
 const chalk = require('chalk')
 const path = require('path')
 
-function getElectronBin(projectDir){
-	if(process.platform === 'win32'){
+function getElectronBin(projectDir) {
+	if (process.platform === 'win32') {
 		return path.join(projectDir, 'node_modules', '.bin', 'electron.cmd')
-	}else {
+	} else {
 		return path.join(projectDir, 'node_modules', '.bin', 'electron')
 	}
 }
 
-function useElectron(projectDir, mainFile, extraArguments = []){
+function useElectron(projectDir, mainFile, extraArguments = []) {
 	const electronBin = getElectronBin(projectDir)
-	
+
 	return {
-		connect(task){
+		connect(task) {
 			task.watch()
 			task.pass()
 
 			task.print(chalk.yellow(` ↳✨ [electron] Running in ${path.basename(mainFile)}`))
 
-			const electronProcess = spawn(electronBin, [mainFile, ...extraArguments],{
+			const electronProcess = spawn(electronBin, [mainFile, ...extraArguments], {
 				stdio: null
 			})
 
 			electronProcess.stdout.on('data', (data) => {
-				const purifiedData = data.toString().replace(/^\s*$/,'')
-				if(purifiedData !== ''){
+				const purifiedData = data.toString().replace(/^\s*$/, '')
+				if (purifiedData !== '') {
 					task.print(chalk.yellow(` →✨ [electron]:  ${data}`))
 				}
 			})
