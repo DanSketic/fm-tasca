@@ -1,7 +1,7 @@
-const useWebpack = require('../../tasca-webpack/src/index.js')
-const useElectron = require('../../tasca-electron/src/index.js')
-const useServe = require('../../tasca-serve/src/index.js')
-const useElectronBuilder = require('../../tasca-electron-builder/src/index.js')
+const useWebpack = require('../../fm-tasca-webpack/src/index.js')
+const useElectron = require('../../fm-tasca-electron/src/index.js')
+const useServe = require('../../fm-tasca-serve/src/index.js')
+const useElectronBuilder = require('../../fm-tasca-electron-builder/src/index.js')
 const path = require('path')
 
 function Task1(cb){
@@ -47,7 +47,7 @@ function WatchWebpack(cb){
 
 function RunElectron(cb){
 	this.use(useElectron(
-		path.join(__dirname, '..', '..', 'tasca-electron'),
+		path.join(__dirname, '..', '..', 'fm-tasca-electron'),
 		path.join(__dirname, 'sample','dist', 'dist.sample.js')
 	))
 }
@@ -72,7 +72,7 @@ exports.serve = [
 
 function buildElectronBuilder(){
 	this.use(useElectronBuilder(
-		path.join(__dirname, '..', '..', 'tasca-electron-builder'),
+		path.join(__dirname, '..', '..', 'fm-tasca-electron-builder'),
 		path.join(__dirname, 'sample')
 	))
 }

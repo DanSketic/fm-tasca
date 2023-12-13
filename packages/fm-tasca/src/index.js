@@ -5,9 +5,11 @@ const chalk = require('chalk')
 const path = require('path')
 const ora = require('ora');
 const { performance } = require('perf_hooks')
-const { Command } = require('commander');
+const figlet = require("figlet");
+const commander = require('commander');
+const program = new commander.Command();
 
-const program = new Command();
+console.log(figlet.textSync("Task Manager"));
 
 function infoParser(arg, res) {
 	const values = arg.split('=')
@@ -21,16 +23,17 @@ program
 	.option('-s, --strict', 'Specify if it should be strict or not', false)
 
 program.parse(process.argv);
+const options = program.opts();
 global.info = program.info
 
 const runFile = process.argv[2]
 const Tasks = require(path.join(process.cwd(), runFile));
 
 (async () => {
-	if (program.tasks == null || program.tasks?.length === 0) {
+	if (options.tasks == null || options.tasks?.length === 0) {
 		executeTasksGroup('default', Tasks.default)
 	} else {
-		for (let taskName of program.tasks) {
+		for (let taskName of options.tasks) {
 			if (Tasks[taskName] == null) {
 				console.log(chalk.red(`Error, any task by name <${taskName}> was found`))
 				process.exit(1)
