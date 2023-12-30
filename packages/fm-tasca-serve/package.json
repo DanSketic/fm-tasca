@@ -1,6 +1,6 @@
 {
 	"name": "fm-tasca-serve",
-	"version": "1.0.3",
+	"version": "1.0.2",
 	"description": "Tasca plugin to easily serve files over a HTTP server.",
 	"main": "src/index.js",
 	"author": "Marc Espín Sanz <mespinsanz@gmail.com>",

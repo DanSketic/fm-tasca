@@ -1,6 +1,6 @@
 {
 	"name": "fm-tasca-electron-builder",
-	"version": "1.0.2",
+	"version": "1.0.4",
 	"description":"Electron-builder plugin for tasca",
 	"main": "src/index.js",
 	"author": "Marc Espín Sanz <mespinsanz@gmail.com>",
@@ -10,6 +10,6 @@
 	},
 	"devDependencies": {
 		"electron": ">10.0.1",
-		"electron-builder": "^22.9.1"
+		"electron-builder": "^24.10.0"
 	}
 }
