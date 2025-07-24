@@ -21,7 +21,8 @@ function useElectron(projectDir, mainFile, extraArguments = []) {
 			task.print(chalk.yellow(` ↳✨ [electron] Running in ${path.basename(mainFile)}`))
 
 			const electronProcess = spawn(electronBin, [mainFile, ...extraArguments], {
-				stdio: null
+				stdio: null,
+				shell: process.platform === 'win32',
 			})
 
 			electronProcess.stdout.on('data', (data) => {

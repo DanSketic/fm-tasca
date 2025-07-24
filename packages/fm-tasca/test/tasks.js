@@ -9,8 +9,7 @@ function Task1(cb){
 }
 
 function Task2(cb){
-	throw "fake error"
-	cb()
+	cb(false, "fake error")
 }
 
 function Task3(cb){

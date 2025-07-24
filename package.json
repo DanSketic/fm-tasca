@@ -1,5 +1,5 @@
 {
-	"private":true,
+	"private": true,
 	"workspaces": [
 		"packages/fm-tasca",
 		"packages/fm-tasca-webpack",
@@ -7,7 +7,11 @@
 		"packages/fm-tasca-serve",
 		"packages/fm-tasca-electron-builder"
 	],
-	"scripts":{
-		"test": "node packages/fm-tasca/src/index.js ./packages/fm-tasca/test/test.js"
+	"scripts": {
+		"test": "node packages/fm-tasca/src/index.js ./packages/fm-tasca/test/tasks.js"
+	},
+	"volta": {
+		"node": "22.17.1",
+		"yarn": "1.22.22"
 	}
 }

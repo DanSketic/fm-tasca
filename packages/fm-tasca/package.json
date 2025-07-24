@@ -1,6 +1,6 @@
 {
 	"name": "fm-tasca",
-	"version": "1.2.3",
+	"version": "1.2.4",
 	"description": "A task runner.",
 	"main": "src/index.js",
 	"author": "Marc Espín Sanz <mespinsanz@gmail.com>",
@@ -10,9 +10,13 @@
 	},
 	"dependencies": {
 		"chalk": "^4.1.2",
-		"commander": "^11.1.0",
-		"figlet": "^1.7.0",
+		"commander": "^12.1.0",
+		"figlet": "^1.8.2",
 		"ora": "^5.4.1"
 	},
-	"devDependencies": {}
+	"devDependencies": {},
+	"volta": {
+		"node": "22.17.1",
+		"yarn": "1.22.22"
+	}
 }

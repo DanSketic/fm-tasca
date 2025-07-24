@@ -20,14 +20,16 @@ function infoParser(arg, res) {
 program
 	.option('-t, --tasks <string...>', 'Specify custom tasks')
 	.option('-i, --info <string...>', 'Specify info', infoParser, {})
-	.option('-s, --strict', 'Specify if it should be strict or not', false)
+	.option('-s, --strict', 'Specify if it should be strict or not', false);
 
 program.parse(process.argv);
 const options = program.opts();
-global.info = program.info
+global.info = program.info;
 
-const runFile = process.argv[2]
+const runFile = process.argv[2];
 const Tasks = require(path.join(process.cwd(), runFile));
+
+let errors = 0;
 
 (async () => {
 	if (options.tasks == null || options.tasks?.length === 0) {
@@ -41,7 +43,7 @@ const Tasks = require(path.join(process.cwd(), runFile));
 			await executeTasksGroup(taskName, Tasks[taskName])
 		}
 	}
-})()
+})();
 
 async function executeTasksGroup(tasksName, tasksGroup) {
 	console.log(chalk.magenta(`\n [${tasksName}] \n`))
@@ -52,8 +54,6 @@ async function executeTasksGroup(tasksName, tasksGroup) {
 		console.log(chalk.green(`\n Finished with 0 errors. \n`))
 	}
 }
-
-let errors = 0
 
 async function runTasks(tasks, prefix, level) {
 	for (let i = 0; i < tasks.length; i++) {

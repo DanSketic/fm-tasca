@@ -1,7 +1,7 @@
 {
 	"name": "fm-tasca-electron-builder",
-	"version": "1.0.4",
-	"description":"Electron-builder plugin for tasca",
+	"version": "1.0.5",
+	"description": "Electron-builder plugin for tasca",
 	"main": "src/index.js",
 	"author": "Marc Espín Sanz <mespinsanz@gmail.com>",
 	"license": "MIT",
@@ -10,6 +10,10 @@
 	},
 	"devDependencies": {
 		"electron": ">10.0.1",
-		"electron-builder": "^24.10.0"
+		"electron-builder": "^26.0.12"
+	},
+	"volta": {
+		"node": "22.17.1",
+		"yarn": "1.22.22"
 	}
 }

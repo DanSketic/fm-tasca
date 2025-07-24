@@ -2,9 +2,13 @@
 	"name": "test",
 	"main": "dist_main/dist.sample.js",
 	"description": "Test app",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"author": "Marc",
 	"devDependencies": {
-		"electron": "^11.1.1"
+		"electron": "^37.2.4"
+	},
+	"volta": {
+		"node": "22.17.1",
+		"yarn": "1.22.22"
 	}
 }
